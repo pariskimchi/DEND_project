@@ -4,18 +4,35 @@ from sql_queries import create_table_queries, drop_table_queries
 
 
 def drop_tables(cur, conn):
+    """
+        Drops each table using the queries in `drop_table_queries` list.
+    """
     for query in drop_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def create_tables(cur, conn):
+    """
+        Creates each table using the queries in `create_table_queries` list. 
+    """
     for query in create_table_queries:
         cur.execute(query)
         conn.commit()
 
 
 def main():
+    """
+        - Read AWS-configuration file through configparser
+            and set config from `dwh.cfg` file
+
+        - Creates connection using config
+
+        - Drop existing table using `drop_table` function
+
+        - Create tables needed on redshift
+    
+    """
     config = configparser.ConfigParser()
     config.read('dwh.cfg')
 
