@@ -42,8 +42,7 @@ staging_events_table_create= ("""
         status integer,
         ts BIGINT ,
         userAgent text, 
-        userId integer,
-
+        userId integer
     )
 """)
 
@@ -60,7 +59,6 @@ staging_songs_table_create = ("""
         duration float,
         year integer
     )
-
 """)
 
 songplay_table_create = ("""
@@ -122,7 +120,6 @@ time_table_create = ("""
         weekday VARCHAR,
         PRIMARY KEY (start_time)
     )
-
 """)
 
 # STAGING TABLES
