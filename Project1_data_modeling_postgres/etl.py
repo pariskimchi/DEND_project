@@ -11,6 +11,9 @@ def process_song_file(cur, filepath):
         - create song record and artist record dataframe 
         and insert into database through the cursor 
 
+        Input:
+            cur - the cursor object connected to database
+            filepath - the path of raw dataset  
     """
     # open song file
     df = pd.read_json(filepath,lines=True)
@@ -31,6 +34,9 @@ def process_log_file(cur, filepath):
         - create time record, songplay record and user record dataframe 
             and insert into database through the cursor 
 
+        Input:
+            cur - the cursor object connected to database
+            filepath - the path of raw dataset 
     """
     # open log file
     df = pd.read_json(filepath,lines=True)
@@ -79,6 +85,12 @@ def process_data(cur, conn, filepath, func):
     """
         - process the function with each datafile from filepath
             and commit through the cursor 
+
+        Input:
+            cur - the cursor object connected to database
+            conn - the connection to database using psycopg2
+            filepath - the path of raw dataset 
+            func - the function to process log file and song file
     """
 
     # get all files matching extension from directory
