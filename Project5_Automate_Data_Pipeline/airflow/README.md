@@ -9,20 +9,20 @@ Then, we monitor production data pipelines by running data quality check operato
 ## plugins 
 ### Helpers
 1. `sql_queries.py`
-This file contains SQL queries to insert from staging tables into fact-dimension tables 
+- This file contains SQL queries to insert from staging tables into fact-dimension tables 
 
 ### Operators 
 1. `stage_redshift.py`
-    Copy raw dataset from S3 to Redshift
+    - Copy raw dataset from S3 to Redshift
 
 2. `load_fact.py`
-    Execute INSERT query into fact table on Redshift
+    - Execute INSERT query into fact table on Redshift
 
 3. `load_dimension.py`
-    Execute INSERT query into dimension tables on Redshift
+    - Execute INSERT query into dimension tables on Redshift
 
 4. `data_quality.py`
-    Execute Data Quality check after pipeline execution
+    - Execute Data Quality check after pipeline execution
 
 ## How to Run 
 1. Create IAM user and Redshift cluster on AWS account 
@@ -38,9 +38,7 @@ This file contains SQL queries to insert from staging tables into fact-dimension
 
 <img src="dag_pipeline.png" alt="dag_pipeline" width="800"/>
 
-
 ### Task Operators 
-
 1. Dummy Operators 
     - `Begin_exeuction` 
     - `End_execution` 
