@@ -43,10 +43,12 @@ This file contains AWS access_key and secret_key
 
 2. Finally, we can check our S3 bucket if there is each tables folder of 
     Fact-dimension tables.
-<img src="data_lake1.png" alt="data_lake1" width="500"/>
+    
+    <img src="data_lake1.png" alt="data_lake1" width="500"/>
 
-In tables folder, we can see that the data loaded as parquet files.
-<img src="data_lake2.png" alt="data_lake2" width="500"/>
+    In tables folder, we can see that the data loaded as parquet files.
+    
+    <img src="data_lake2.png" alt="data_lake2" width="500"/>
 
 
 
