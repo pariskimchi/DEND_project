@@ -37,8 +37,8 @@ This file contains AWS access_key and secret_key
 1. After few hour, we can check our spark job 
     in the Spark History  Server page.
 
-<img src="history1.png" alt="history1" width="500"/>
-<img src="history2.png" alt="history2" width="500"/>
+    <img src="history1.png" alt="history1" width="500"/>
+    <img src="history2.png" alt="history2" width="500"/>
 
 
 2. Finally, we can check our S3 bucket if there is each tables folder of 
