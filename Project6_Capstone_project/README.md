@@ -1,8 +1,8 @@
 # Data Engineering Capstone Project 
-_ _ _
+
 
 ## Project Summary 
-_ _ _ 
+
 
 The objective of this project was to create ETL pipeline for I94 immigration data, Global land temperature data and US demography dataset to form an analytics database on imigration events as Data Warehouse. 
 
@@ -17,9 +17,9 @@ The project follows the follow steps:
 
 
 ## Project Structure 
-_ _ _ 
 
-- `/data`: source dataset 
+
+- `/sample_data`: sample dataset
 - `capstone.cfg`: AWS configuration file 
 - `etl.py` : ETL pipeline builder file from s3 bucket to s3 bucket
 - `Capstone project template.ipynb`: jupyter notebook that was used for building the ETL pipeline.
@@ -67,7 +67,7 @@ Please refer to []().
 Since the purpose of this data warehouse is for OLAP and BI app usage, we will model these data sets with star schema data modeling.
 
 * Star Schema
-
+https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/capstone%20tables.png
 
 #### Data Pipeline Build Up steps
 1. Load datasets 
@@ -77,7 +77,7 @@ Since the purpose of this data warehouse is for OLAP and BI app usage, we will m
     airline dimensional table, save as parquet.
 4. clean us-demograph dataset and create demograhpy dimensional table, save as parquet.
 5. clean global temperature dataset and create temperature dimensional table, save as parquet
-_ _ _
+
 
 
 ### Step 4: Run Pipelines to Model the Data 
