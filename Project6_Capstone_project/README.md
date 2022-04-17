@@ -58,7 +58,7 @@ This project will integrate I94 immigration data, world temperature data and US 
 1. Use pandas and pyspark for exploratory data analysis to understand on datasets
 2. split datasets to Fact-dimension tables and checking missing values
 
-Please refer to []().
+Please refer to [Capstone_Project_Template.ipynb](https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/Capstone_Project_Template.ipynb).
 
 
 ### Step 3: Define the Data Model
@@ -67,7 +67,9 @@ Please refer to []().
 Since the purpose of this data warehouse is for OLAP and BI app usage, we will model these data sets with star schema data modeling.
 
 * Star Schema
-https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/capstone%20tables.png
+
+    ![alt text](https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/capstone%20tables.png
+)
 
 #### Data Pipeline Build Up steps
 1. Load datasets 
@@ -83,8 +85,7 @@ https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/
 ### Step 4: Run Pipelines to Model the Data 
 
 #### 4.1 Create the data model
-
-Please refer to
+Please refer to [Capstone_Project_Template.ipynb](https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/Capstone_Project_Template.ipynb).
 
 #### 4.2 Running the ETL pipeline 
 
