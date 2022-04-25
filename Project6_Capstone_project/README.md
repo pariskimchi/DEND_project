@@ -82,8 +82,7 @@ Since the purpose of this data warehouse is for OLAP and BI app usage, we will m
 
 * Star Schema
 
-    ![alt text](https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/capstone%20tables.png
-)
+    ![alt text](https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/capstone_star_schema.png)
 
 #### Data Pipeline Build Up steps
 1. Load datasets 
