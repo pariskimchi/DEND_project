@@ -3,8 +3,22 @@
 
 ## Project Summary 
 
+This project is part of Udacity Data Engineering Nanodegree program. The idea is to take multiple disparate data sources, clean the data and process it through an ETL pipeline to produce an analytics database on immigration events as Data Warehouse.
 
-The objective of this project was to create ETL pipeline for I94 immigration data, Global land temperature data and US demography dataset to form an analytics database on imigration events as Data Warehouse. 
+The source data is I94 Immigration data, World Temperature Data and U.S. City Demographic Data.The plan is to enrich this data using the other data sources suggested and create a working data warehouse which can be used for analytics.
+
+Plan:
+* upload the source datasets on a data lake on AWS s3 
+* Data will be extracted, transformed and stored into a data warehouse on another aws s3 as parquet files
+    to be used Fact-Dimension tables.
+* The stored data on a data warehouse will be used for specific analytics.
+
+Ideas on questions we could explore with the final dataset:
+* For a given city and state, how many immigrants enter from which countries?
+* Which visa is most used for immigration ? and which state is where these visa most used?
+* which city is where foreign-born citizens live ? and Is there any relation between immigration and foreign-born citizens?
+
+
 
 
 The project follows the follow steps:
@@ -68,7 +82,7 @@ Since the purpose of this data warehouse is for OLAP and BI app usage, we will m
 
 * Star Schema
 
-    ![alt text](https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/capstone_star_schema.png
+    ![alt text](https://github.com/pariskimchi/DEND_project/blob/main/Project6_Capstone_project/capstone%20tables.png
 )
 
 #### Data Pipeline Build Up steps
@@ -94,5 +108,3 @@ and this script is to create ETL pipeline to create Fact-Dimensional table
 in Amazon S3. 
 
 `spark-submit --packages saurfang:spark-sas7bdat:2.0.0-s_2.11 --packages org.apache.hadoop:hadoop-aws:2.7.2 etl.py`
-
-

@@ -10,10 +10,10 @@ import matplotlib.pyplot as plt
 import pyspark 
 from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
-from pyspark.sql.functions import udf,isnan, col
+from pyspark.sql.functions import udf,isnan, col, upper
 from pyspark.sql.functions import monotonically_increasing_id
-from pyspark.sql.types import DateType
 from pyspark.sql.functions import to_date,year,month
+from pyspark.sql.types import DateType
 
 
 # setup logging 
@@ -266,6 +266,10 @@ def process_demography_data(spark, input_data, output_data):
 
     dim_demog_df = convert_to_target_type(dim_demog_df, int_cols, "integer")
     dim_demog_df = convert_to_target_type(dim_demog_df, float_cols, "float")
+
+    # convert city, state columns to upper
+    dim_demog_df = dim_demog_df.withColumn('city',upper(F.col('city')))\
+        .withColumn('state',upper(F.col('state')))
 
     # write dim_demog table as parquet 
     dim_demog_df.write.parquet(path=output_data+"dim_demog",mode='overwrite')
