@@ -168,6 +168,10 @@ def process_immigration_data(spark, input_data, output_data):
 
     # create fact_immigration table 
     fact_immigration_df = immigration_df.select(target_cols).distinct()\
+        .filter(immigration_df.depdate.isNotNull())\
+        .filter(immigration_df.gender.isNotNull())\
+        .filter(immigration_df.i94addr.isNotNull())\
+        .filter(immigration_df.fltno.isNotNull())\
         .withColumn('immigration_id', monotonically_increasing_id())
         
     # Data Wrangling to match data model
@@ -199,6 +203,8 @@ def process_immigration_data(spark, input_data, output_data):
     target_cols = ['cicid','airline','admnum','fltno','visatype']
 
     dim_airline_df = immigration_df.select(target_cols)\
+        .filter(immigration_df.airline.isNotNull())\
+        .filter(immigration_df.fltno.isNotNull())\
         .withColumn('immi_airline_id',monotonically_increasing_id())
 
     # rename columns 
